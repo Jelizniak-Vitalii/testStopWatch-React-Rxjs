@@ -27,7 +27,7 @@ const StopWatch = ()=>{
             
         }  
     }
-    const Reset = ()=>{
+    const reset = ()=>{
         if(time > 0){
             setTime(time = 0)
             setButtonState(!true);
@@ -35,7 +35,7 @@ const StopWatch = ()=>{
     }
 
     let a = 0
-    const DoubleClick = ()=>{
+    const doubleClick = ()=>{
         setTimeout(()=>{
             a++
             if(a === 2){
@@ -78,8 +78,8 @@ const StopWatch = ()=>{
                     <button className="timer-btn-group__start btn" onClick={changeStateBtn}>{buttonState ? 'Start' : 'Stop'}</button>
                 </div>
                 <div className="timer-btn-group__second">
-                    <button className="timer-btn-group__stop btn" onClick={DoubleClick}>Wait</button>
-                    <button className="timer-btn-group__reset btn" onClick={Reset}>Reset</button>
+                    <button className="timer-btn-group__stop btn" onClick={doubleClick}>Wait</button>
+                    <button className="timer-btn-group__reset btn" onClick={reset}>Reset</button>
                 </div>
             </div>
         </div>
